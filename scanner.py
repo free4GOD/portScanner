@@ -31,7 +31,7 @@ while True:
 
 
 
-print("Please wait, scanning...")
+print("Please wait while scanning...")
 initialIpSplitted = initialIp.split(".")
 finalIpSplitted = [int(b) for b in finalIp.split('.')]
 incrementalNum0 = int(initialIpSplitted[0])
