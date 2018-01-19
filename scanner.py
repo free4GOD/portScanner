@@ -6,13 +6,13 @@ from datetime import datetime
 
 while True:
 	initialIp = input("Enter the initial IP\n")
-	if not re.search("^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$", initialIp):
+	if not re.search(r'^(\d+\.){3}\d+$', initialIp) or not all(int(b) in range(256) for b in initialIp.split('.')):
 		print("The IP is incorrect. Try again\n")
 	else:
 		break
 while True:
 	finalIp = input("Enter the final IP\n")
-	if not re.search("^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$", finalIp):
+	if not re.search(r'^(\d+\.){3}\d+$', finalIp) or not all(int(b) in range(256) for b in finalIp.split('.')):
 		print("The IP is incorrect. Try again\n")
 	else:
 		break
