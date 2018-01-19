@@ -33,17 +33,11 @@ while True:
 
 print("Please wait, scanning...")
 initialIpSplitted = initialIp.split(".")
-finalIpSplitted = finalIp.split(".")
+finalIpSplitted = [int(b) for b in finalIp.split('.')]
 incrementalNum0 = int(initialIpSplitted[0])
 incrementalNum1 = int(initialIpSplitted[1])
 incrementalNum2 = int(initialIpSplitted[2])
 incrementalNum3 = int(initialIpSplitted[3])
-finalIpSplitted[0] = int(finalIpSplitted[0])
-finalIpSplitted[1] = int(finalIpSplitted[1])
-finalIpSplitted[2] = int(finalIpSplitted[2])
-finalIpSplitted[3] = int(finalIpSplitted[3])
-
-
 timeStart = datetime.now()
 try:
 	for i in range(incrementalNum0, finalIpSplitted[0]+1):
